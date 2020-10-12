@@ -146,7 +146,7 @@
       {
         "ArrayExpression": "consistent",
         "ArrayPattern": {
-          "minItems": 3
+          "minItems": 1
         }
       }
     ]
