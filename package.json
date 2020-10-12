@@ -8,9 +8,16 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "format:fix": "pretty-quick --staged",
+    "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer ./dist/my-epic-app/stats-es2015.json"
   },
   "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "run-s format:fix lint"
+    }
+  },
   "dependencies": {
     "@angular/animations": "~9.1.2",
     "@angular/common": "~9.1.2",
@@ -32,12 +39,17 @@
     "@types/jest": "^26.0.14",
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
+    "husky": "^4.3.0",
     "jest": "^26.5.2",
     "jest-preset-angular": "^8.3.1",
+    "npm-run-all": "^4.1.5",
+    "pretty-quick": "^3.0.2",
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~3.8.3"
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "~3.8.3",
+    "webpack-bundle-analyzer": "^3.9.0"
   },
   "jest": {
     "preset": "jest-preset-angular",
