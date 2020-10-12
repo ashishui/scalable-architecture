@@ -10,7 +10,7 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "format:fix": "pretty-quick --staged",
-    "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer ./dist/my-epic-app/stats-es2015.json"
+    "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer ./dist/scalable-angular-app/stats-es2015.json"
   },
   "private": true,
   "husky": {
@@ -43,6 +43,7 @@
     "jest": "^26.5.2",
     "jest-preset-angular": "^8.3.1",
     "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2",
     "pretty-quick": "^3.0.2",
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
