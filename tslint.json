@@ -1,5 +1,9 @@
 {
-  "extends": "tslint:recommended",
+  "extends": [
+    "tslint:recommended",
+    "tslint-angular",
+    "tslint-config-prettier"
+  ],
   "rules": {
     "align": {
       "options": [
@@ -140,16 +144,7 @@
     "template-banana-in-box": true,
     "template-no-negated-async": true,
     "use-lifecycle-interface": true,
-    "use-pipe-transform-interface": true,
-    "array-element-newline": [
-      "error",
-      {
-        "ArrayExpression": "consistent",
-        "ArrayPattern": {
-          "minItems": 1
-        }
-      }
-    ]
+    "use-pipe-transform-interface": true
   },
   "rulesDirectory": [
     "codelyzer"
